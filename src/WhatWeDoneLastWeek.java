@@ -11,7 +11,8 @@ public class WhatWeDoneLastWeek
         Scanner reader = new Scanner(System.in);
 
         // Obtaining age via user input, repeatedly prompting while age < 0
-        do {
+        do
+        {
             try
                 {
                     // Prompting user for input
@@ -20,12 +21,8 @@ public class WhatWeDoneLastWeek
                     // Assigning user input as integer to age variable
                     age = Integer.parseInt(reader.nextLine());
                 }
-            catch (NumberFormatException e)
-                {
-                    // Printing an error message and returning in case of an exception
-                    System.out.println("Error: please enter an integer only.");
-                }
-            }
+            catch (NumberFormatException e){};
+        }
         while (age < 0);
 
         // Outputting the age of the user based on their input
